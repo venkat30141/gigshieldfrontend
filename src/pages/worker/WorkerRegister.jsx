@@ -64,7 +64,7 @@ function WorkerRegister() {
       };
 
       const response = await axios.post(
-        "http://localhost:8085/api/workers/register",
+        "https://web-production-603af5.up.railway.app/api/workers/register",
         payload
       );
 

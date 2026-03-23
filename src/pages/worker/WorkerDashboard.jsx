@@ -52,7 +52,7 @@ function WorkerDashboard() {
   const fetchDashboard = async () => {
 
     const res = await axios.get(
-      `http://localhost:8085/api/dashboard/${workerId}`
+      `https://web-production-603af5.up.railway.app/api/dashboard/${workerId}`
     );
 
     setWorker(res.data.worker);
@@ -67,7 +67,7 @@ function WorkerDashboard() {
   const buyPlan = async (planId) => {
 
     await axios.post(
-      `http://localhost:8085/api/policies/buy?workerId=${workerId}&planId=${planId}`
+      `https://web-production-603af5.up.railway.app/api/policies/buy?workerId=${workerId}&planId=${planId}`
     );
 
     alert("Plan purchased successfully!");
@@ -78,7 +78,7 @@ function WorkerDashboard() {
   try {
 
     await axios.post(
-      "http://localhost:8085/api/payments/pay",
+      "https://web-production-603af5.up.railway.app/api/payments/pay",
       {
         workerId: workerId,
         policyId: policyId,
@@ -110,7 +110,7 @@ function WorkerDashboard() {
   try {
 
     const res = await axios.get(
-      `http://localhost:8085/api/weather/${location}`
+      `https://web-production-603af5.up.railway.app/api/weather/${location}`
     );
 
     setWeather(res.data);
@@ -128,7 +128,7 @@ const openPaymentsTab = () => {
 const fetchPayments = async () => {
 
   const res = await axios.get(
-    `http://localhost:8085/api/payments/worker/${workerId}`
+    `https://web-production-603af5.up.railway.app/api/payments/worker/${workerId}`
   );
 
   setPayments(res.data);
