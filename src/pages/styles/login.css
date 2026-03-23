@@ -1,0 +1,148 @@
+/* FULL SCREEN ANIMATION */
+
+.animation-screen{
+  height:100vh;
+  width:100%;
+  background:linear-gradient(135deg,#5f6cff,#9b8cff);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+/* DELIVERY IMAGE ANIMATION */
+
+.delivery-animation{
+  width:300px;
+
+  animation: moveCenter 2s ease forwards;
+}
+
+@keyframes moveCenter{
+
+  0%{
+    transform:translateX(-500px);
+  }
+
+  60%{
+    transform:translateX(0px);
+  }
+
+  100%{
+    transform:translateX(0px);
+  }
+
+}
+
+.app-title{
+  color:white;
+  margin-top:20px;
+  font-size:40px;
+  font-weight:bold;
+
+  animation: fadeText 3s ease;
+}
+
+@keyframes fadeText{
+
+  0%{opacity:0;}
+  100%{opacity:1;}
+
+}
+
+/* LOGIN PAGE */
+
+.login-wrapper{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#bdc3dc;
+}
+
+/* LOGIN CARD */
+
+.login-card{
+  display:flex;
+  width:850px;
+  background:rgb(96, 153, 197);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 20px 50px rgba(0,0,0,0.2);
+}
+
+/* LEFT */
+
+.login-left{
+  flex:1;
+  padding:40px;
+  background:#6f77b2;
+}
+
+/* RIGHT */
+
+.login-right{
+  flex:1;
+  padding:40px;
+}
+
+/* INPUT */
+
+.input-group{
+  margin-bottom:20px;
+}
+
+.input-group label{
+  display:block;
+  margin-bottom:6px;
+}
+
+.input-group input{
+  width:100%;
+  padding:10px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+/* BUTTON */
+
+.login-btn{
+  width:100%;
+  padding:12px;
+  border:none;
+  background:#5f6cff;
+  color:white;
+  font-weight:bold;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.login-btn:hover{
+  background:#4b57e0;
+}
+
+/* LOGIN APPEAR */
+
+.fade-in{
+  animation:fadeLogin 1s ease;
+}
+
+@keyframes fadeLogin{
+
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+.login-message{
+  margin-top:10px;
+  color:red;
+}
